@@ -116,7 +116,7 @@ app.get("/daily_usage_carpark/faculty/:name", (request, response) => {
   });
 });
 
-app.get("/daily_usage_carpark/:name", (request, response) => {
+app.get("/daily_usage_carpark/building/:name", (request, response) => {
   collection_2.find({ "Building": request.params.name }).toArray((error, result) => { 
       if (error) {
         return response.status(500).send(error);
